@@ -7,10 +7,10 @@ import android.widget.AdapterView
 import android.widget.Button
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
     override fun onNothingSelected(parent: AdapterView<*>?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onItemSelected(parent: AdapterView<*>?,
@@ -75,7 +75,9 @@ class MainActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
             }
         }
         var totalPremium=(extraSmoker+ premium + extraMale )
-        textViewPremium.text="RM${totalPremium}"
+        val symbol= Currency.getInstance(Locale.getDefault()).symbol
+       // textViewPremium.text="RM${totalPremium}"
+        textViewPremium.text=String.format("%s %d",symbol,totalPremium)
     }
 
     fun Reset(view: View) {
