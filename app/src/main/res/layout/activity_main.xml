@@ -91,9 +91,10 @@
 
     <TextView
         android:id="@+id/textViewPremium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="363dp"
+        android:layout_height="69dp"
         android:text="@string/insurance_premium"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonCalculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

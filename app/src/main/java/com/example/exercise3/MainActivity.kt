@@ -77,12 +77,12 @@ class MainActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
         var totalPremium=(extraSmoker+ premium + extraMale )
         val symbol= Currency.getInstance(Locale.getDefault()).symbol
        // textViewPremium.text="RM${totalPremium}"
-        textViewPremium.text=String.format("%s %d",symbol,totalPremium)
+        textViewPremium.text=String.format("%s %s %d",getString(R.string.insurance_premium),symbol,totalPremium)
     }
 
     fun Reset(view: View) {
         checkBoxSmoker.setChecked(false)
-        textViewPremium.text=null
+        textViewPremium.text=getString(R.string.insurance_premium)
         spinnerAge.setSelection(0)
         radioButtonMale.setChecked(false)
         radioButtonFemale.setChecked(false)
